@@ -1,0 +1,33 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+
+<div class="container mb-5">
+
+    <div class="row mb-3 mt-3 bg-white">
+        <div class="col-12">
+            <h1>Running ...</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <p>Config-Path: {{data['path']}}</p>
+        </div>
+
+    </div>
+    <div class="row mb-5">
+        <div class="col-12 mb-3 w-100">
+            <a class="btn btn-lg btn-outline-danger w-100" href="/config/stop">Stop</a>
+
+        </div>
+        <div class="col-12 mb-3 w-100">
+
+            <a class="btn btn-lg btn-outline-info w-100" href="/main">Back to Configs</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

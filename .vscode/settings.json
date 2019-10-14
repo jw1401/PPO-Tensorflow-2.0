@@ -1,0 +1,36 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.linting.enabled": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.git*": false,
+        "**/__*":false
+    },
+    "python.linting.pylintArgs": [],
+    "python.pythonPath": "E:\\Anaconda\\envs\\RLTF2\\python.exe",
+    "python.jediEnabled": false,
+
+    "editor.tokenColorCustomizations": {
+        "comments":{
+            "foreground": "",
+            "fontStyle": ""
+        },
+
+    
+    },
+
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#ff008cad",
+        "editorIndentGuide.background": "#ffffff41"
+    },
+
+    "editor.minimap.enabled": false,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestyleArgs": ["--ignore=E701, W293, E251, E501, W291, E201, E211, E127, E116"]
+}

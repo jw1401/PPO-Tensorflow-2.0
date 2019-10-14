@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run MAIN EDITOR",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args":["--runner=run-ppo-ineditor","--working_dir=./__WORKING_DIRS__/__STANDARD__/", "--config=__EXAMPLE__.yaml"],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Run MAIN PPO",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args":["--runner=run-ppo","--working_dir=./__WORKING_DIRS__/__STANDARD__/", "--config=__EXAMPLE__.yaml"],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Run IMITATION",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args":["--runner=run-behavioral-cloning", "--working_dir=./__WORKING_DIRS__/__STANDARD__/", "--config=__EXAMPLE__.yaml"],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Run EXPERT",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args":["--runner=run-expert-demonstrations", "--working_dir=./__WORKING_DIRS__/__STANDARD__/", "--config=__EXAMPLE__.yaml"],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Run Manager",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_manager.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

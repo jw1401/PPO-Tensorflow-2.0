@@ -1,0 +1,107 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+
+<div class="floating-menu">
+    <div class="container">
+        <div class="row">
+            <a class="btn btn-sm btn-primary mb-3 w-100" title="Open Commands for RL" href="/commands"><i
+                    class="fas fa-terminal"></i></a>
+        </div>
+        <div class="row">
+            <button class="btn btn-sm btn-primary w-100"
+                title="Create new Working Directories and set actual Working Directories" data-toggle="modal"
+                data-target="#New_Config_Modal"><i class="fas fa-folder-plus"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mb-5">
+
+    <div class="row mt-4 mb-4 bg-white sticky-top">
+        <div class="col-12">
+            <h1>Config Space</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="row d-flex justify-content-center">
+
+                {% for cfg in data[0]%}
+                <div class="col col-lg-4 col-md-6 mb-3">
+                    <div class="list-group-item " style="height: 120px">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h1><i class="far fa-folder"></i></h1>
+                            </div>
+                            <div class="col-6 float-right">
+                                <a class="btn btn-sm btn-outline-danger float-right" href="/main/delete/{{cfg.id}}">
+                                    Delete </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <a href="/config/{{cfg.id}}"> {{cfg.name}} </a>
+                                <p class="badge badge-light mt-3 float-right"><small>{{cfg.path}}</small> </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="New_Config_Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-folder-plus"></i> New Config </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mt-2">
+                    <div class="col-12">
+
+                        <form method=post enctype=multipart/form-data> <div class="form-row">
+                            <div class="col-10 mb-2">
+                                <input type="text" class="form-control form-control-sm w-100" id="inp_new_wdir"
+                                    placeholder="Config Name" name="config_name" required>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" id="btn_new_wdir" class="btn btn-sm btn-primary w-100"><i
+                                        class="fas fa-folder-plus"></i></button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+    console.log('hallo');
+
+    $(document).ready(() => {
+        console.log("ready");
+
+    })
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+env_params:
+  lr: 0.001
+  name: "Environment Test"
+  hidden_sizes: [1,2]
+  iters: 40
+
+policy_params:
+
+  iters: 40
+
+train_params:
+
+  trainer: "PPO"

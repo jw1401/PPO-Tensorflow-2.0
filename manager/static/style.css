@@ -1,0 +1,34 @@
+.floating-menu {
+    
+    font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.644);
+    padding:10px;
+    width: 50px;
+    
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    border-radius: 0px 10px 10px 0px;
+
+    border-right: thin solid rgb(188, 191, 192);
+    border-top: thin solid rgb(188, 191, 192);
+    border-bottom: thin solid rgb(188, 191, 192);  
+
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+  }
+
+  .floating-menu:hover{
+    width: 60px;
+    background-color: rgb(232, 243, 247)
+  }
+
+  body, html {
+    height: 100%;
+  }
+

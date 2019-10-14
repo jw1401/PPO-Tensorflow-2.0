@@ -1,0 +1,91 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+
+<div class="floating-menu">
+    <a class="btn btn-sm btn-primary w-100 mb-2" href="/main"><i class="far fa-arrow-alt-circle-left"></i></a>
+    <a class="btn btn-sm btn-primary w-100 mb-2" href="/config/start/{{data[3]}}"><i class="fas fa-running"></i></a>
+    <button class="btn btn-sm btn-primary w-100 " onclick="saveConfigButton()"> <i class="fas fa-save"></i>
+    </button>
+</div>
+
+
+<div class="container mb-5">
+
+    <div class="row align-items-center mb-4 mt-4">
+        <div class="col-6">
+            <h1>Configure Parameters </h1>
+        </div>
+        <div class="col-6">
+            <p class="badge badge-info mt-3 float-right">{{data[2]}}</p>
+        </div>
+    </div>
+
+
+    <form method="POST" enctype=multipart/form-data action="/config/{{data[3]}}">
+        {% for params, pv in data[0].items() %} <div class="row mb-4 overflow-auto">
+            <div class="col-12">
+                <div class="card shadow-sm">
+
+                    <div class="card-header">
+                        <h5 class="text-info font-weight-bold">
+                            {{params}}
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+                        {% for key, value in pv.items()%}
+
+                        {% if value is sameas true or value is sameas false %}
+
+                        <div class="form-group row">
+                            <label class="col-form-label-sm col-md-2 col-sm-4" for="{{key}}">{{key}}</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="{{key}}" name="{{key}}"
+                                        value="True" {{'checked' if value is sameas true else ''}}>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% else %}
+                        <div class="form-group row">
+                            <label class="col-form-label-sm col-md-2 col-sm-4" for="{{key}}">{{key}}</label>
+                            <div class="col-md-10 col-sm-8">
+                                <input type="text" class="form-control form-control-sm" id="{{key}}"
+                                    placeholder="{{key}}" name="{{key}}" value="{{value}}">
+                                <small id="{{key}}" class="form-text text-muted">{{data[1][key]}}</small>
+                            </div>
+
+                        </div>
+                        {% endif %}
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <input class="btn btn-outline-primary" type="submit" value="Save Config" id="saveConfig">
+
+    </form>
+
+</div>
+
+
+
+<script>
+
+    function saveConfigButton() {
+        console.log("Pressed");
+        $("#saveConfig").click()
+    }
+
+    $(document).ready(() => {
+        console.log("ready");
+    })
+
+</script>
+
+{% endblock %}

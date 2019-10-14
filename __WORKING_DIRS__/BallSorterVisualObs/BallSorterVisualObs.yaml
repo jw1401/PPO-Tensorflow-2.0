@@ -1,0 +1,28 @@
+env_params:
+  env_name: "../Envs/BallSorterVisualObs/Environment.exe"
+  frame_stacking: false
+  frames_stack_size: 3
+  num_envs: 2
+  seed: 0
+
+policy_params:
+  clip_grads: 0.5
+  clip_ratio: 0.2
+  ent_coef: 0.1
+  hidden_sizes: [32,32]
+  lr: 0.001
+  target_kl: 0.01
+  train_iters: 5
+  v_coef: 0.5
+
+train_params:
+  nn_architecure: "cnn_simple_actor_critic"  # "vis_vec_actor_critic" "cnn_simple_actor_critic" "simple_actor_critic"
+  epochs: 1000
+  gamma: 0.99
+  lam: 0.97
+  load_model: false
+  num_mini_batches: 4
+  save_freq: 5
+  steps_per_epoch: 250
+  trainer: PPO
+  training: true

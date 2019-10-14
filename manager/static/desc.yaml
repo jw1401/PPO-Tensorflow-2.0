@@ -1,0 +1,8 @@
+lr: "Learning Rate - Value 0.1 - 0.001"
+env_name: " The name of the Env to laod - it empty -> Editor mode"
+hidden_sizes: "Size of hidden layers of the MLP"
+epochs: "Number of epochs to run"
+steps_per_epoch: "Steps per epoch before RL update"
+gamma: "Discount Factor"
+lam: "Lambda for Generalized Advantage Estimate"
+ent_coef: "entropy for exploration in Mult Env divide by n_envs"
