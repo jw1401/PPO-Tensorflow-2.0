@@ -12,9 +12,9 @@ For test reasons I designed four simple training environments with Unity 3D and 
 
 ## How to use
 
-1. Clone [PPO Repo!](https://github.com/jw1401/PPO-Tensorflow-2.0) and run pip install -e in the PPO folder
+1. Clone [PPO Repo](https://github.com/jw1401/PPO-Tensorflow-2.0) and run pip install -e in the PPO folder
 
-2. Clone [Environments Repo!](https://github.com/jw1401/Environments)
+2. Clone [Environments Repo](https://github.com/jw1401/Environments)
 
     Put the repos in an project-folder. You shold have following file structure.
 
@@ -26,7 +26,7 @@ For test reasons I designed four simple training environments with Unity 3D and 
         PPO     
     ```
 
-3. (Optional) If you are familiar with ML-Agents you can also clone this [Repo!](https://github.com/jw1401/UnitySDK-MLAgents-Environments) and run from the Unity 3D Editor.
+3. (Optional) If you are familiar with ML-Agents you can also clone this [Repo](https://github.com/jw1401/UnitySDK-MLAgents-Environments) and run from the Unity 3D Editor.
 
 4. Set the configs in the *.yaml file that you want to use
 
