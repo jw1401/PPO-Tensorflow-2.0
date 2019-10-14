@@ -2,7 +2,6 @@
 _Trained_Network
 _Training_Diagnostics
 imitation_data
-BallSorter
 # envs
 /models
 /summaries

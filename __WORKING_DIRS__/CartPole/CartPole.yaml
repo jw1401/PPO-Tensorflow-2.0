@@ -1,5 +1,5 @@
 env_params:
-  env_name: ../Envs/CartPole/Environment.exe
+  env_name: "../Environments/CartPole/Environment.exe"
   frame_stacking: false
   frames_stack_size: 3
   num_envs: 2
@@ -20,9 +20,9 @@ train_params:
   gamma: 0.99
   lam: 0.97
   load_model: false
-  nn_architecure: simple_actor_critic
+  nn_architecure: "simple_actor_critic"
   num_mini_batches: 4
   save_freq: 5
   steps_per_epoch: 300
-  trainer: PPO
+  trainer: "PPO"
   training: true
